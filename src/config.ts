@@ -74,24 +74,6 @@ export const siteConfig = {
       description: "Built an intelligent email handling system at Northeastern University using AWS SES, Lambda, and RAG architecture. Processed 100+ websites via ETL pipelines, generated vector embeddings with SentenceTransformers, and implemented a retrieval-augmented generation pipeline using AWS Bedrock (Llama-3-70B) and LangChain. Achieved high accuracy with RAGAS evaluation metrics and integrated guardrails to ensure factual consistency.",
       link: "https://github.com/AADARSH96",
       skills: ["AWS SES", "Lambda", "RAG", "LangChain", "ChromaDB", "Llama-3", "Python", "BeautifulSoup"]
-    },
-    {
-      name: "Multi-Touch Attribution Data Pipeline",
-      description: "Designed and built end-to-end data pipelines at J.P. Morgan Chase processing 3+ TB of cross-channel customer data. Orchestrated complex workflows using AWS Step Functions, optimized PySpark jobs saving $50K annually, and delivered real-time attribution reporting through Snowflake architecture with materialized views and Tableau dashboards.",
-      link: "https://github.com/AADARSH96",
-      skills: ["AWS Step Functions", "PySpark", "EMR", "Snowflake", "Tableau", "Docker", "Terraform"]
-    },
-    {
-      name: "Fraud Detection ML Pipeline",
-      description: "Developed AWS-native ETL pipelines at Wells Fargo supporting ML workflows for fraud detection. Partnered with ML teams to transform transaction data into feature sets for SageMaker, implemented medallion architecture with Airflow DAGs, and optimized S3 storage reducing costs by 30%.",
-      link: "https://github.com/AADARSH96",
-      skills: ["AWS Lambda", "Glue", "SageMaker", "Apache Airflow", "S3", "Python"]
-    },
-    {
-      name: "Regulatory Reporting System",
-      description: "Engineered pipelines at Cognizant processing 1TB+/month of financial compliance data. Designed REST API microservices with FastAPI, implemented GDPR compliance with tokenization and encryption, and secured APIs using OAuth 2.0 and JWT with comprehensive testing.",
-      link: "https://github.com/AADARSH96",
-      skills: ["PySpark", "Hive", "FastAPI", "OAuth 2.0", "Hadoop", "Tableau"]
     }
   ],
   
@@ -99,7 +81,7 @@ export const siteConfig = {
     {
       company: "Northeastern University",
       title: "Research Assistant",
-      dateRange: "Jan 2024 - Present",
+      dateRange: "Sep 2024 - May 2024",
       bullets: [
         "Automated customer email handling using AWS SES with Lambda, triggering workflows for inbound messages",
         "Built RAG pipeline using AWS Bedrock (Llama-3-70B), LangChain, and ChromaDB for context-aware responses",
@@ -152,7 +134,7 @@ export const siteConfig = {
       achievements: [
         "Specialization in Machine Learning and AI",
         "Research Assistant - AI/ML Projects",
-        "Relevant Coursework: Deep Learning, Natural Language Processing, Big Data Systems"
+        "Relevant Coursework: Natural Language Processing, Big Data Systems, Large Language Models, Cloud Computing"
       ]
     },
     {
