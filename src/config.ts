@@ -98,7 +98,7 @@ export const siteConfig = {
       description: "Comprehensive toolkit for advanced prompt engineering with OpenAI models. Features systematic prompt optimization techniques, few-shot learning examples, chain-of-thought prompting, and evaluation frameworks. Includes best practices for cost optimization and response quality improvement across different use cases.",
       link: "https://github.com/AADARSH96/openai-prompt-engineering",
       skills: ["OpenAI", "Prompt Engineering", "GPT-4", "Python", "Few-shot Learning", "Optimization"]
-    
+    }
   ],
   
   experience: [
