@@ -11,7 +11,7 @@ export const siteConfig = {
   },
   
   aboutMe:
-    "I'm a Data Engineer and Full Stack Developer currently pursuing my MS in Data Science at Northeastern University. With 5+ years of experience building scalable data pipelines and cloud solutions, I specialize in AWS services, big data technologies, and recently AI/ML implementations including RAG systems. I've worked at leading financial institutions like J.P. Morgan Chase and Wells Fargo, where I built data pipelines processing terabytes of data, optimized costs by tens of thousands of dollars, and delivered business-critical analytics solutions. My passion lies in solving complex data challenges and building efficient, scalable systems that drive business value.",
+    "I'm a Data Engineer and completed my MS in Data Science at Northeastern University. With 5+ years of experience building scalable data pipelines and cloud solutions, I specialize in AWS services, big data technologies, and recently AI/ML implementations including RAG systems. I've worked at leading financial institutions like J.P. Morgan Chase and Wells Fargo, where I built data pipelines processing terabytes of data, optimized costs by tens of thousands of dollars, and delivered business-critical analytics solutions. My passion lies in solving complex data challenges and building efficient, scalable systems that drive business value.",
   
   skills: [
     // Programming Languages
