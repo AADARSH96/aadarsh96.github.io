@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Aadarsh Gaikwad",
-  title: "Data Engineer & Full Stack Developer",
+  title: "AI Data Engineer",
   description: "MS in Data Science student at Northeastern University with expertise in cloud architecture, data pipelines, and AI/ML solutions",
   accentColor: "#8b5cf6", // Purple accent - you can change this hex code
   
