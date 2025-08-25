@@ -1,4 +1,4 @@
-export const config = {
+export const siteConfig = {
   name: "Aadarsh Gaikwad",
   title: "Data Engineer & Full Stack Developer",
   description: "MS in Data Science student at Northeastern University with expertise in cloud architecture, data pipelines, and AI/ML solutions",
