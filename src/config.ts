@@ -74,7 +74,31 @@ export const siteConfig = {
       description: "Built an intelligent email handling system at Northeastern University using AWS SES, Lambda, and RAG architecture. Processed 100+ websites via ETL pipelines, generated vector embeddings with SentenceTransformers, and implemented a retrieval-augmented generation pipeline using AWS Bedrock (Llama-3-70B) and LangChain. Achieved high accuracy with RAGAS evaluation metrics and integrated guardrails to ensure factual consistency.",
       link: "https://github.com/AADARSH96",
       skills: ["AWS SES", "Lambda", "RAG", "LangChain", "ChromaDB", "Llama-3", "Python", "BeautifulSoup"]
-    }
+    },
+        {
+      name: "LLM Document RAG System",
+      description: "Implemented a Retrieval-Augmented Generation system for intelligent document processing. Built with LangChain and vector databases to enable semantic search across large document repositories, providing context-aware responses with source citations. Features efficient chunking strategies, embedding generation, and optimized retrieval mechanisms.",
+      link: "https://github.com/AADARSH96/llm-doc-RAG",
+      skills: ["RAG", "LangChain", "Vector DB", "Python", "LLMs", "ChromaDB", "OpenAI"]
+    },
+    {
+      name: "LLM Document CAG System",
+      description: "Developed a Context-Augmented Generation system for enhanced document understanding and generation. Implements advanced context management techniques to maintain conversation state and document relationships, enabling more accurate and contextually relevant AI responses for complex document queries.",
+      link: "https://github.com/AADARSH96/llm-doc-CAG",
+      skills: ["CAG", "LLMs", "Context Management", "Python", "Document Processing", "AI/ML"]
+    },
+    {
+      name: "NeMo Guardrails Implementation",
+      description: "Built safety and reliability layers for LLM applications using NVIDIA's NeMo Guardrails framework. Implemented programmable rules to prevent harmful outputs, ensure factual accuracy, and maintain conversation boundaries. Includes custom rail configurations for enterprise use cases and comprehensive testing suites.",
+      link: "https://github.com/AADARSH96/nemo-guardrails",
+      skills: ["NeMo Guardrails", "LLM Safety", "Python", "NVIDIA", "AI Ethics", "Prompt Security"]
+    },
+    {
+      name: "OpenAI Prompt Engineering Toolkit",
+      description: "Comprehensive toolkit for advanced prompt engineering with OpenAI models. Features systematic prompt optimization techniques, few-shot learning examples, chain-of-thought prompting, and evaluation frameworks. Includes best practices for cost optimization and response quality improvement across different use cases.",
+      link: "https://github.com/AADARSH96/openai-prompt-engineering",
+      skills: ["OpenAI", "Prompt Engineering", "GPT-4", "Python", "Few-shot Learning", "Optimization"]
+    
   ],
   
   experience: [
