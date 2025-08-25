@@ -5,5 +5,5 @@ import tailwindcss from "@tailwindcss/vite";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://astronaut.github.io',
-  base: 'aadarsh96.github.io',
+  base: '/aadarsh96.github.io',
 });
