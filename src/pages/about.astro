@@ -1,12 +1,29 @@
+---
 import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
 import About from "../components/About.astro";
 import Education from "../components/Education.astro";
-import { siteConfig } from "../config";
+import Footer from "../components/Footer.astro";
+import * as cfg from "../config";
 import "../styles/global.css";
+
+const siteConfig = (cfg?.siteConfig ?? (cfg as any)?.default ?? cfg) as any;
+const accent = siteConfig?.accentColor ?? "#000000";
+const social = siteConfig?.social ?? {};
+---
 
 <html lang="en">
   <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={siteConfig.description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
     <title>{siteConfig.name} - About</title>
   </head>
   <body>
@@ -14,9 +31,24 @@ import "../styles/global.css";
     <main>
       <About />
       <Education />
-      <!-- Contact info is already in Hero bottom links,
-           if you want a dedicated Contact section, create Contact.astro
-           or add it here -->
+
+      <!-- Contact (simple; uses your existing social links) -->
+      <section id="contact" class="p-8 sm:p-12 md:p-16 lg:p-24">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+          <div class="lg:col-span-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900">Contact</h2>
+            <div class="w-[75px] h-[5px] mt-2 rounded-full" style={`background-color: ${accent}`} />
+          </div>
+          <div class="lg:col-span-8">
+            <div class="space-y-3 text-lg text-gray-700">
+              {social?.email && <p>Email: <a class="underline" href={`mailto:${social.email}`}>{social.email}</a></p>}
+              {social?.linkedin && <p>LinkedIn: <a class="underline" href={social.linkedin} target="_blank" rel="noopener noreferrer">Profile</a></p>}
+              {social?.github && <p>GitHub: <a class="underline" href={social.github} target="_blank" rel="noopener noreferrer">{social.github}</a></p>}
+              {social?.twitter && <p>Twitter/X: <a class="underline" href={social.twitter} target="_blank" rel="noopener noreferrer">{social.twitter}</a></p>}
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <Footer />
   </body>
