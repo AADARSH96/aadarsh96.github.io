@@ -1,0 +1,23 @@
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import About from "../components/About.astro";
+import Education from "../components/Education.astro";
+import { siteConfig } from "../config";
+import "../styles/global.css";
+
+<html lang="en">
+  <head>
+    <title>{siteConfig.name} - About</title>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <About />
+      <Education />
+      <!-- Contact info is already in Hero bottom links,
+           if you want a dedicated Contact section, create Contact.astro
+           or add it here -->
+    </main>
+    <Footer />
+  </body>
+</html>

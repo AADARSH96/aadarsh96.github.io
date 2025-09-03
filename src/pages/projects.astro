@@ -1,0 +1,19 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Projects from "../components/Projects.astro";
+import { siteConfig } from "../config";
+import "../styles/global.css";
+---
+<html lang="en">
+  <head>
+    <title>{siteConfig.name} - Projects</title>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <Projects />
+    </main>
+    <Footer />
+  </body>
+</html>
