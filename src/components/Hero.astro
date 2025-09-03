@@ -1,31 +1,85 @@
 ---
-/* no imports needed */
+import { siteConfig } from "../config";
 ---
-<header
-  id="header"
-  class="fixed top-0 left-0 right-0 z-50 hidden md:block transition-all duration-300"
->
-  <nav class="max-w-7xl mx-auto px-8 py-4">
-    <ul class="flex items-center gap-8 justify-center">
-      <li><a href="/" class="text-gray-700 hover:text-black font-medium">Home</a></li>
-      <li><a href="/about" class="text-gray-700 hover:text-black font-medium">About</a></li>
-      <li><a href="/experience" class="text-gray-700 hover:text-black font-medium">Experience</a></li>
-      <li><a href="/projects" class="text-gray-700 hover:text-black font-medium">Projects</a></li>
-    </ul>
-  </nav>
-</header>
 
-<script>
-  window.addEventListener("scroll", () => {
-    const header = document.getElementById("header");
-    if (window.scrollY > 100) {
-      header?.classList.add("bg-white/80", "backdrop-blur-sm");
-    } else {
-      header?.classList.remove("bg-white/80", "backdrop-blur-sm");
-    }
-  });
-</script>
+<div
+  id="hero"
+  class="relative isolate overflow-hidden bg-white py-24 md:h-screen"
+  style={`--accent-color: ${siteConfig.accentColor}`}
+>
+  <!-- Gradient overlay -->
+  <div
+    class="absolute inset-0 -z-10"
+    style={`background: radial-gradient(ellipse 800px 1200px at 0% 0%, ${siteConfig.accentColor}40 0%, ${siteConfig.accentColor}25 20%, ${siteConfig.accentColor}10 40%, rgba(255, 255, 255, 0.3) 70%, rgba(255, 255, 255, 0.8) 90%, white 100%)`}
+  >
+  </div>
+  <svg
+    aria-hidden="true"
+    class="absolute inset-0 -z-10 size-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+  >
+    <defs>
+      <pattern
+        x="50%"
+        y={-1}
+        id="0787a7c5-978c-4f66-83c7-11c213f99cb7"
+        width={200}
+        height={200}
+        patternUnits="userSpaceOnUse"
+      >
+        <path d="M.5 200V.5H200" fill="none"></path>
+      </pattern>
+      <pattern
+        id="programming-symbols"
+        x="0"
+        y="0"
+        width="400"
+        height="400"
+        patternUnits="userSpaceOnUse"
+      >
+        <text x="50"  y="50"  fill={siteConfig.accentColor} font-family="monospace" font-size="24" transform="rotate(-15)">&lt;/&gt;</text>
+        <text x="150" y="100" fill={siteConfig.accentColor} font-family="monospace" font-size="20" transform="rotate(10)">{}</text>
+        <text x="250" y="80"  fill={siteConfig.accentColor} font-family="monospace" font-size="18" transform="rotate(-5)">=&gt;</text>
+        <text x="100" y="200" fill={siteConfig.accentColor} font-family="monospace" font-size="22" transform="rotate(15)">[]</text>
+        <text x="300" y="180" fill={siteConfig.accentColor} font-family="monospace" font-size="20" transform="rotate(-10)">&lt;&gt;</text>
+        <text x="200" y="250" fill={siteConfig.accentColor} font-family="monospace" font-size="24" transform="rotate(5)">()</text>
+        <text x="50"  y="320" fill={siteConfig.accentColor} font-family="monospace" font-size="18" transform="rotate(-8)">::</text>
+        <text x="350" y="300" fill={siteConfig.accentColor} font-family="monospace" font-size="22" transform="rotate(12)">==</text>
+        <text x="150" y="350" fill={siteConfig.accentColor} font-family="monospace" font-size="20" transform="rotate(-15)">++</text>
+        <text x="250" y="370" fill={siteConfig.accentColor} font-family="monospace" font-size="24" transform="rotate(8)">;</text>
+      </pattern>
+    </defs>
+    <rect fill="url(#programming-symbols)" width="100%" height="100%" opacity="0.2"></rect>
+    <rect fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)" width="100%" height="100%" stroke-width={0}></rect>
+  </svg>
+
+  <div class="h-full mx-auto p-8 sm:p-12 md:p-24 flex items-center">
+    <div>
+      <h2 class="text-pretty text-xl sm:text-2xl md:text-5xl font-bold tracking-tight text-gray-700 animate-fade-in">
+        Hello! 👋
+      </h2>
+      <h1 class="mt-6 sm:mt-8 md:mt-10 text-pretty text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold tracking-tight text-gray-800 animate-fade-in animation-delay-200">
+        I'm <span style={{ color: siteConfig.accentColor }}>{siteConfig.name}</span>
+      </h1>
+      <p class="mt-4 sm:mt-6 md:mt-8 text-pretty text-base sm:text-lg md:text-xl/8 font-medium text-gray-600 animate-fade-in animation-delay-400">
+        {siteConfig.title}
+      </p>
+    </div>
+  </div>
+
+  <div class="absolute bottom-0 left-0 right-0 p-8 sm:p-12 md:p-24 flex gap-x-4 sm:gap-x-6 md:gap-x-8 text-gray-700 animate-fade-in animation-delay-600">
+    {siteConfig.social?.email && (
+      <a href={`mailto:${siteConfig.social.email}`} aria-label="Email" class="transition-colors duration-300 hover:text-[var(--accent-color)]">…</a>
+    )}
+    {siteConfig.social?.linkedin && ( <a href={siteConfig.social.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="transition-colors duration-300 hover:text-[var(--accent-color)]">…</a> )}
+    {siteConfig.social?.twitter && ( <a href={siteConfig.social.twitter} target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="transition-colors duration-300 hover:text-[var(--accent-color)]">…</a> )}
+    {siteConfig.social?.github && ( <a href={siteConfig.social.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="transition-colors duration-300 hover:text-[var(--accent-color)]">…</a> )}
+  </div>
+</div>
 
 <style>
-  html { scroll-behavior: smooth; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);} }
+  .animate-fade-in { animation: fadeIn 0.8s ease-out forwards; opacity: 0; }
+  .animation-delay-200 { animation-delay: 0.2s; }
+  .animation-delay-400 { animation-delay: 0.4s; }
+  .animation-delay-600 { animation-delay: 0.6s; }
 </style>
