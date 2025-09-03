@@ -11,7 +11,7 @@ export const siteConfig = {
   },
   
   aboutMe:
-    "I'm a Data Engineer and completed my MS in Data Science at Northeastern University. With 5+ years of experience building scalable data pipelines and cloud solutions, I specialize in AWS services, big data technologies, and recently AI/ML implementations including RAG systems. I've worked at leading financial institutions like J.P. Morgan Chase and Wells Fargo, where I built data pipelines processing terabytes of data, optimized costs by tens of thousands of dollars, and delivered business-critical analytics solutions. My passion lies in solving complex data challenges and building efficient, scalable systems that drive business value.",
+    "I'm a AI Data Engineer and completed my MS in Data Science at Northeastern University. With 5+ years of experience building scalable data pipelines and cloud solutions, I specialize in AWS services, big data technologies, and recently AI/ML implementations including RAG systems. I've worked at leading financial institutions like J.P. Morgan Chase and Wells Fargo, where I built data pipelines processing terabytes of data, optimized costs by tens of thousands of dollars, and delivered business-critical analytics solutions. My passion lies in solving complex data challenges and building efficient, scalable systems that drive business value.",
   
   skills: [
     // Programming Languages
@@ -82,10 +82,10 @@ export const siteConfig = {
       skills: ["RAG", "LangChain", "Vector DB", "Python", "LLMs", "ChromaDB", "OpenAI"]
     },
     {
-      name: "LLM Document CAG System",
-      description: "Developed a Context-Augmented Generation system for enhanced document understanding and generation. Implements advanced context management techniques to maintain conversation state and document relationships, enabling more accurate and contextually relevant AI responses for complex document queries.",
-      link: "https://github.com/AADARSH96/llm-doc-CAG",
-      skills: ["CAG", "LLMs", "Context Management", "Python", "Document Processing", "AI/ML"]
+  name: "Multi-Agent Airline Assistant with OpenAI SDK",
+  description: "Production-style example demonstrating multi-agent architecture using OpenAI Agents SDK. Features session-based conversation memory, agent handoffs between triage/FAQ/seat-booking agents, input/output guardrails for safety validation, and context carryover between new chats. Implements persistent storage with SQLite for user conversations and includes function tools for FAQ lookup and seat updates.",
+  link: "https://github.com/AADARSH96/openai-airline-agent",
+  skills: ["OpenAI Agents SDK", "Multi-Agent Systems", "Python", "SQLite", "Session Management", "Guardrails", "Function Tools"]
     },
     {
       name: "NeMo Guardrails Implementation",
