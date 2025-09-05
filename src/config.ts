@@ -75,17 +75,23 @@ export const siteConfig = {
       link: "https://github.com/AADARSH96",
       skills: ["AWS SES", "Lambda", "RAG", "LangChain", "ChromaDB", "Llama-3", "Python", "BeautifulSoup"]
     },
-        {
+    {
+      name: "Multi-Agent Airline Assistant with OpenAI SDK",
+      description: "Production-style example demonstrating multi-agent architecture using OpenAI Agents SDK. Features session-based conversation memory, agent handoffs between triage/FAQ/seat-booking agents, input/output guardrails for safety validation, and context carryover between new chats. Implements persistent storage with SQLite for user conversations and includes function tools for FAQ lookup and seat updates.",
+      link: "https://github.com/AADARSH96/openai-airline-agent",
+      skills: ["OpenAI Agents SDK", "Multi-Agent Systems", "Python", "SQLite", "Session Management", "Guardrails", "Function Tools"]
+    },
+    {
+      name: "AI Web Crawler",
+      description: "Minimal project that crawls any website using Crawl4AI and extracts clean, LLM-ready Markdown. Removes navigation, ads, and UI noise while preserving main content, headings, lists, and labeled metadata. Includes a generic instruction set, CLI options, and OpenAI-powered content filtering.",
+      link: "https://github.com/AADARSH96/ai-web-crawler",
+      skills: ["Crawl4AI", "Web Scraping", "Markdown", "OpenAI", "LLM Content Filtering", "Python", "AsyncIO"]
+    },
+    {
       name: "LLM Document RAG System",
       description: "Implemented a Retrieval-Augmented Generation system for intelligent document processing. Built with LangChain and vector databases to enable semantic search across large document repositories, providing context-aware responses with source citations. Features efficient chunking strategies, embedding generation, and optimized retrieval mechanisms.",
       link: "https://github.com/AADARSH96/llm-doc-RAG",
       skills: ["RAG", "LangChain", "Vector DB", "Python", "LLMs", "ChromaDB", "OpenAI"]
-    },
-    {
-  name: "Multi-Agent Airline Assistant with OpenAI SDK",
-  description: "Production-style example demonstrating multi-agent architecture using OpenAI Agents SDK. Features session-based conversation memory, agent handoffs between triage/FAQ/seat-booking agents, input/output guardrails for safety validation, and context carryover between new chats. Implements persistent storage with SQLite for user conversations and includes function tools for FAQ lookup and seat updates.",
-  link: "https://github.com/AADARSH96/openai-airline-agent",
-  skills: ["OpenAI Agents SDK", "Multi-Agent Systems", "Python", "SQLite", "Session Management", "Guardrails", "Function Tools"]
     },
     {
       name: "NeMo Guardrails Implementation",
