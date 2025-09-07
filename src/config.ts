@@ -106,7 +106,16 @@ export const siteConfig = {
       skills: ["OpenAI", "Prompt Engineering", "GPT-4", "Python", "Few-shot Learning", "Optimization"]
     }
   ],
-
+opensource:[
+{
+  "name": "Prompt-to-JSON",
+  "description": "Open-source Python package that converts natural language prompts into structured JSON using GPT models. Provides a simple API for downstream automation, supports Python 3.6+, and is distributed under the MIT License. Published on PyPI with versioned releases and designed for integration into AI/ML workflows.",
+  "links": {
+    "pypi": "https://pypi.org/project/prompt-to-json/",
+    "github": "https://github.com/OpenSoucrce/prompt-to-json"
+  }
+}  
+],
   experience: [
     {
       company: "Northeastern University",
