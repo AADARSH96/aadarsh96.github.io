@@ -1,1 +1,122 @@
+---
+import { siteConfig } from "../config";
 
+const items = Array.isArray(siteConfig.openSource) ? siteConfig.openSource : [];
+const hasOSS = items.length > 0;
+---
+
+{
+  hasOSS && (
+    <section id="open-source" class="p-8 sm:p-12 md:p-16 lg:p-24">
+      <div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+          <div class="lg:col-span-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900">
+              Open Source
+            </h2>
+            <div
+              class="w-[75px] h-[5px] mt-2 rounded-full"
+              style={`background-color: ${siteConfig.accentColor}`}
+            />
+          </div>
+
+          <div class="lg:col-span-8">
+            <div class="space-y-8">
+              {items.map((project, index) => {
+                const hasAnyLink = project.links && Object.values(project.links).some(Boolean);
+                const Wrapper = "div";
+
+                return (
+                  <div class="group relative" key={`oss-${index}`}>
+                    <Wrapper
+                      class={`block relative p-4 sm:p-6 md:p-8 bg-gray-50 rounded-xl sm:rounded-2xl border border-gray-200 transition-all duration-300 ${
+                        hasAnyLink ? "hover:bg-white hover:shadow-xl hover:border-gray-300 hover:-translate-y-1" : ""
+                      }`}
+                    >
+                      <div class="space-y-4">
+                        <div class="flex items-start justify-between gap-4">
+                          <div>
+                            <span
+                              class="text-sm font-mono"
+                              style={{ color: siteConfig.accentColor }}
+                            >
+                              0{index + 1}
+                            </span>
+                            <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mt-1">
+                              {project.name}
+                            </h3>
+                          </div>
+
+                          {hasAnyLink && (
+                            <div class="flex flex-wrap gap-2 shrink-0">
+                              {project.links?.github && (
+                                <a
+                                  href={project.links.github}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gray-300 bg-white text-gray-800 text-xs sm:text-sm font-medium transition-all duration-300 hover:border-gray-400 hover:-translate-y-0.5"
+                                >
+                                  <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor" aria-hidden="true">
+                                    <path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.94c.58.11.79-.25.79-.56v-2.02c-3.2.7-3.88-1.38-3.88-1.38-.53-1.35-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.78 2.73 1.27 3.39.97.11-.76.41-1.27.74-1.56-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.45.11-3.03 0 0 .98-.31 3.2 1.18a11.1 11.1 0 0 1 5.83 0c2.21-1.49 3.19-1.18 3.19-1.18.64 1.58.24 2.74.12 3.03.74.81 1.18 1.83 1.18 3.09 0 4.43-2.69 5.41-5.25 5.7.42.36.79 1.07.79 2.17v3.22c0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z" />
+                                  </svg>
+                                  <span class="hidden sm:inline">GitHub</span>
+                                </a>
+                              )}
+                              {project.links?.pypi && (
+                                <a
+                                  href={project.links.pypi}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gray-300 bg-white text-gray-800 text-xs sm:text-sm font-medium transition-all duration-300 hover:border-gray-400 hover:-translate-y-0.5"
+                                >
+                                  <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor" aria-hidden="true">
+                                    <path d="M14 3H9a5 5 0 0 0-5 5v5a4 4 0 0 0 4 4h2v-3H8a2 2 0 0 1-2-2V8a3 3 0 0 1 3-3h5a2 2 0 0 1 2 2v3h3V7a4 4 0 0 0-4-4Zm-4 18h5a5 5 0 0 0 5-5v-5a4 4 0 0 0-4-4h-2v3h2a2 2 0 0 1 2 2v5a3 3 0 0 1-3 3h-5a2 2 0 0 1-2-2v-3H7v3a4 4 0 0 0 4 4Z" />
+                                  </svg>
+                                  <span class="hidden sm:inline">PyPI</span>
+                                </a>
+                              )}
+                              {project.links?.docs && (
+                                <a
+                                  href={project.links.docs}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gray-300 bg-white text-gray-800 text-xs sm:text-sm font-medium transition-all duration-300 hover:border-gray-400 hover:-translate-y-0.5"
+                                >
+                                  <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor" aria-hidden="true">
+                                    <path d="M6 2h7l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm7 1.5V8h4.5" />
+                                  </svg>
+                                  <span class="hidden sm:inline">Docs</span>
+                                </a>
+                              )}
+                              {project.links?.other && (
+                                <a
+                                  href={project.links.other}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gray-300 bg-white text-gray-800 text-xs sm:text-sm font-medium transition-all duration-300 hover:border-gray-400 hover:-translate-y-0.5"
+                                >
+                                  <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5h8v14H5z" />
+                                  </svg>
+                                  <span class="hidden sm:inline">Link</span>
+                                </a>
+                              )}
+                            </div>
+                          )}
+                        </div>
+
+                        <p class={`text-base sm:text-lg text-gray-600 leading-relaxed`}>
+                          {project.description}
+                        </p>
+                      </div>
+                    </Wrapper>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
