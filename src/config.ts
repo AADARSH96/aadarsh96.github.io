@@ -1,7 +1,7 @@
 export const siteConfig = {
   "name": "Aadarsh Gaikwad",
   "title": "AI-focused Data Engineer and Data Scientist",
-  "description": "MS in Data Science graduate from Northeastern University specializing in cloud-native data pipelines, MLOps on AWS, and applied AI/LLM systems.",
+  "description": "MS in Data Science graduate from Northeastern University specializing in MLOps, cloud-native data platforms, and applied AI/LLM systems on AWS and Databricks.",
   "accentColor": "#8b5cf6",
 
   "social": {
@@ -10,97 +10,75 @@ export const siteConfig = {
     "github": "https://github.com/AADARSH96"
   },
 
-"aboutMe": "AI-focused Data Engineer and Data Scientist with more than five years of experience building scalable data pipelines, cloud-native platforms, and applied AI/ML solutions. I have delivered attribution and fraud/segmentation systems at J.P. Morgan and Wells Fargo, optimized EMR and S3 costs by tens of thousands of dollars, and developed NLP pipelines with BERT and spaCy to process loan documents. Recently, I have shipped RAG systems using AWS Bedrock, LangChain, and vector databases. I am passionate about reliable data foundations, measurable business value, and clean, reproducible MLOps practices."
-,
+  "aboutMe": "AI-focused Data Engineer and Data Scientist with over five years of experience building large-scale data pipelines, MLOps workflows, and applied AI/LLM systems. At J.P. Morgan and Wells Fargo, I delivered attribution and fraud detection systems, optimized EMR and S3 costs by tens of thousands, and built end-to-end Databricks pipelines integrated with Unity Catalog, Delta Tables, and MLflow. I’ve developed NLP and RAG solutions using Bedrock, LangChain, DSPy, and vector databases, and deployed LoRA fine-tuning on Llama-3.1 models via SageMaker and Unsloth. My focus is on reliable data foundations, reproducible MLOps, and AI systems that drive measurable business outcomes.",
+
   "skills": [
-    "Python",
-    "SQL",
-    "JavaScript",
-    "Node.js",
-    "Shell Scripting",
-    "AWS Lambda",
-    "Amazon S3",
-    "Amazon EMR",
-    "AWS Glue",
-    "Amazon EC2",
-    "Amazon Athena",
-    "Amazon Redshift",
-    "Amazon CloudWatch",
-    "AWS Step Functions",
-    "Amazon SES",
-    "Amazon SNS",
-    "Amazon SQS",
-    "Amazon SageMaker",
-    "Snowflake",
-    "BigQuery",
-    "MySQL",
-    "PostgreSQL",
-    "MongoDB",
-    "DynamoDB",
-    "ChromaDB",
-    "PySpark",
-    "Apache Airflow",
-    "Hadoop",
-    "Hive",
-    "RAG Systems",
-    "LangChain",
-    "AWS Bedrock",
-    "LLM Fine-tuning",
-    "Vector Databases",
-    "Prompt Engineering",
-    "Docker",
-    "Terraform",
-    "GitHub Actions",
-    "Jenkins",
-    "FastAPI",
-    "REST APIs",
-    "GraphQL",
-    "Tableau"
+    "Python", "SQL", "JavaScript", "Node.js", "Shell Scripting",
+    "AWS Lambda", "Amazon S3", "Amazon EMR", "AWS Glue", "Amazon EC2",
+    "Amazon Athena", "Amazon Redshift", "Amazon CloudWatch", "AWS Step Functions",
+    "Amazon SES", "Amazon SNS", "Amazon SQS", "Amazon SageMaker", "Databricks",
+    "Snowflake", "BigQuery", "MySQL", "PostgreSQL", "MongoDB", "DynamoDB", "ChromaDB",
+    "PySpark", "Apache Airflow", "Hadoop", "Hive", "Unity Catalog", "MLflow",
+    "RAG Systems", "LangChain", "AWS Bedrock", "LLM Fine-tuning", "Vector Databases",
+    "DSPy", "Prompt Engineering", "Unsloth", "Docker", "Terraform", "GitHub Actions",
+    "Jenkins", "FastAPI", "REST APIs", "GraphQL", "Tableau"
   ],
 
   "projects": [
     {
+      "name": "DSPy Prompt Optimizer",
+      "description": "Framework to optimize prompts programmatically using DSPy’s MIPRO optimizer and evaluation-driven feedback loops. Implemented few-shot rewriters, task adapters, and a modular experiment runner with structured metrics for LLM evaluation.",
+      "link": "https://github.com/AADARSH96/dspy-prompt-optimizer",
+      "skills": ["DSPy", "Prompt Optimization", "Evaluation Loops", "LangChain", "Python", "RAG", "LLMs"]
+    },
+    {
+      "name": "Unsloth LoRA Fine-Tuning on AWS SageMaker",
+      "description": "End-to-end Llama-3.1 fine-tuning pipeline using Unsloth and AWS SageMaker. Automated LoRA adapters training on GPU Spot instances with cost tracking, model registry integration, and multi-instance orchestration via Terraform.",
+      "link": "https://github.com/AADARSH96/unsloth-llama31-lora-sagemaker",
+      "skills": ["Unsloth", "AWS SageMaker", "Llama-3.1", "LoRA", "Terraform", "GPU Optimization", "MLOps"]
+    },
+    {
       "name": "AI-Powered Customer Email Automation System",
-      "description": "Intelligent email handling with AWS SES and Lambda plus a RAG architecture. Parsed more than one hundred sites via ETL, generated embeddings with SentenceTransformers, and served retrieval using Bedrock (Llama-3-70B) and LangChain. Evaluated with RAGAS and applied guardrails for factual consistency.",
+      "description": "RAG-based email automation pipeline with AWS SES, Lambda, and Bedrock (Llama-3-70B). Parsed hundreds of websites with ETL, generated embeddings with SentenceTransformers, and implemented factual guardrails using RAGAS metrics.",
       "link": "https://github.com/AADARSH96",
-      "skills": ["AWS SES", "AWS Lambda", "RAG", "LangChain", "ChromaDB", "Llama-3", "Python", "BeautifulSoup"]
+      "skills": ["AWS SES", "AWS Lambda", "RAG", "LangChain", "ChromaDB", "Bedrock", "Python", "BeautifulSoup"]
     },
     {
       "name": "Multi-Agent Airline Assistant with OpenAI SDK",
-      "description": "Production-style demo using OpenAI Agents SDK with triage/FAQ/seat-booking agents, conversation memory, safe-tool invocation, and SQLite persistence. Includes function tools for FAQ lookups and seat updates.",
+      "description": "Built multi-agent demo with OpenAI Agents SDK handling triage, FAQs, and booking tasks. Features safe tool invocation, session memory, and SQLite persistence.",
       "link": "https://github.com/AADARSH96/openai-airline-agent",
-      "skills": ["OpenAI Agents SDK", "Multi-Agent Systems", "Python", "SQLite", "Session Management", "Guardrails", "Function Tools"]
+      "skills": ["OpenAI Agents SDK", "Multi-Agent Systems", "Python", "SQLite", "Function Tools", "Session Management"]
     },
     {
       "name": "AI Web Crawler",
-      "description": "Crawls sites with Crawl4AI and outputs clean, LLM-ready Markdown. Removes nav/ads, preserves structure and metadata, includes CLI and OpenAI-powered content filtering.",
+      "description": "Web crawler powered by Crawl4AI to extract clean, LLM-ready Markdown with ad removal and metadata preservation. CLI and OpenAI filters ensure structured and relevant data for training pipelines.",
       "link": "https://github.com/AADARSH96/ai-web-crawler",
-      "skills": ["Crawl4AI", "Web Scraping", "Markdown", "OpenAI", "LLM Filtering", "Python", "AsyncIO"]
+      "skills": ["Crawl4AI", "Web Scraping", "OpenAI", "Markdown", "AsyncIO", "LLM Filtering", "Python"]
     },
     {
       "name": "LLM Document RAG System",
-      "description": "Retrieval-Augmented Generation pipeline for large document stores with LangChain and vector DBs. Semantic search, source-grounded answers, chunking strategies, embedding generation, and optimized retrieval.",
+      "description": "Retrieval-Augmented Generation system for document intelligence using LangChain and vector databases. Includes chunking optimization, reranking, and precision/recall evaluation with RAGAS.",
       "link": "https://github.com/AADARSH96/llm-doc-RAG",
-      "skills": ["RAG", "LangChain", "Vector DB", "Python", "LLMs", "ChromaDB", "OpenAI"]
+      "skills": ["LangChain", "Vector DB", "RAG", "Python", "LLMs", "ChromaDB", "OpenAI"]
     },
     {
       "name": "NeMo Guardrails Implementation",
-      "description": "Safety and reliability layers for LLM apps using NVIDIA NeMo Guardrails. Programmable rules to prevent harmful outputs, ensure factuality, and enforce conversation boundaries with tests and custom rails.",
+      "description": "Implemented NVIDIA NeMo Guardrails to ensure LLM safety, factuality, and compliance. Configured rule-based interceptors and validated outputs through automated tests and audit logs.",
       "link": "https://github.com/AADARSH96/nemo-guardrails",
-      "skills": ["NeMo Guardrails", "LLM Safety", "Python", "NVIDIA", "AI Ethics", "Prompt Security"]
+      "skills": ["NeMo Guardrails", "LLM Safety", "Python", "AI Ethics", "Prompt Security"]
     },
     {
       "name": "OpenAI Prompt Engineering Toolkit",
-      "description": "Toolkit for prompt design and evaluation: few-shot patterns, reasoning templates, cost controls, and quality checks across tasks.",
+      "description": "Comprehensive toolkit for few-shot prompt design, cost control, and reasoning evaluation. Includes prompt templates, consistency metrics, and task-specific testing harnesses.",
       "link": "https://github.com/AADARSH96/openai-prompt-engineering",
-      "skills": ["OpenAI", "Prompt Engineering", "GPT-4 class models", "Python", "Few-shot Learning", "Optimization"]
+      "skills": ["OpenAI", "Prompt Engineering", "GPT-4", "Python", "Few-Shot Learning", "Optimization"]
     }
   ],
 
   "opensource": [
     {
       "name": "Prompt-to-JSON",
-      "description": "Python package to convert natural-language prompts into structured JSON. MIT-licensed, published on PyPI with CI, pre-commit, and coverage.",
+      "description": "MIT-licensed Python package to convert natural-language prompts into structured JSON. Published on PyPI with pre-commit hooks, CI/CD, and 100% test coverage.",
       "links": {
         "pypi": "https://pypi.org/project/prompt-to-json/",
         "github": "https://github.com/OpenSoucrce/prompt-to-json"
@@ -114,33 +92,32 @@ export const siteConfig = {
       "title": "Research Assistant",
       "dateRange": "Sep 2024 – May 2025",
       "bullets": [
-        "Designed a retrieval-augmented generation pipeline using AWS Bedrock, LangChain, and ChromaDB to generate context-aware responses from historical support data.",
-        "Built web data pipelines with BeautifulSoup and Scrapy and stored validated, structured outputs in Amazon S3.",
-        "Generated dense embeddings with SentenceTransformers and a fixed-length chunking strategy with fifteen percent overlap; persisted indexes in ChromaDB.",
-        "Applied reranking for improved top-k retrieval and created prompt templates that increased reasoning consistency.",
-        "Implemented an evaluation harness with RAGAS metrics including answer relevancy, context recall, and precision."
+        "Developed a retrieval-augmented generation (RAG) pipeline using AWS Bedrock, LangChain, and ChromaDB to answer context-specific queries from institutional data.",
+        "Built structured web-scraping pipelines (BeautifulSoup, Scrapy) and stored validated outputs in S3 with metadata tagging.",
+        "Generated embeddings using SentenceTransformers and implemented overlap-aware chunking with persistent vector indexes.",
+        "Applied reranking to boost retrieval precision and introduced RAGAS evaluation for recall and factuality."
       ]
     },
     {
-      "company": "J.P. Morgan Chase & Co",
+      "company": "J.P. Morgan Chase & Co.",
       "title": "Data Scientist",
       "dateRange": "Apr 2023 – Dec 2023",
       "bullets": [
-        "Built a PyTorch and BERT text-classification pipeline on fifty thousand loan documents, improving accuracy from 78% to 86%.",
-        "Implemented spaCy NER to extract key loan fields such as amount, applicant name, and property address with roughly 90% accuracy.",
-        "Developed and deployed a serverless document workflow using API Gateway, AWS Lambda, and DynamoDB for secure intake and batch inference."
+        "Migrated credit-card campaign analysis from Oracle to Databricks, processing 500K+ transactions with PySpark to achieve 3× faster campaign scoring.",
+        "Developed customer propensity models using XGBoost and MLlib with feature management in Databricks Feature Store and experiment tracking in MLflow.",
+        "Built Unity Catalog + Delta Table pipelines to centralize campaign metrics for three marketing teams, eliminating manual reporting.",
+        "Deployed APIs with Node.js and DynamoDB to trigger Databricks scoring workflows, reducing deployment cycles from days to hours."
       ]
     },
     {
-      "company": "J.P. Morgan Chase & Co",
+      "company": "J.P. Morgan Chase & Co.",
       "title": "Data Engineer",
       "dateRange": "Mar 2022 – Apr 2023",
       "bullets": [
-        "Built attribution data pipelines processing more than three terabytes of customer behavior data using AWS Step Functions to orchestrate EMR, Lambda, and Glue jobs.",
-        "Created pipeline control APIs with Node.js and AWS Lambda behind API Gateway for Step Functions triggers and job-status monitoring.",
-        "Optimized PySpark workloads and EMR configurations with Spot Instances, reducing annual compute spend by $50,000.",
-        "Designed Snowflake ingestion and reporting with Snowpipe, clustering keys, and materialized views to enable near real-time attribution dashboards.",
-        "Automated deployments with Docker, Terraform, and GitHub Actions using a blue-green strategy, reducing release times by forty percent."
+        "Engineered attribution pipelines processing 3+ TB of customer data via AWS Step Functions orchestrating EMR, Lambda, and Glue jobs.",
+        "Optimized PySpark and EMR tuning with Spot Instances, cutting compute costs by $50K annually while maintaining SLA windows.",
+        "Built Snowflake ingestion and reporting using Snowpipe, clustering keys, and materialized views for real-time marketing analytics.",
+        "Automated deployments using Docker, Terraform, and GitHub Actions with blue-green strategies reducing release time by 40%."
       ]
     },
     {
@@ -148,11 +125,10 @@ export const siteConfig = {
       "title": "Data Engineer",
       "dateRange": "Apr 2021 – Mar 2022",
       "bullets": [
-        "Supported fraud detection and customer segmentation by building Amazon SageMaker data pipelines that produced curated feature datasets for machine-learning teams.",
-        "Implemented feature engineering with PySpark in SageMaker Processing, including one-hot encoding, scaling, and time-window aggregations.",
-        "Built a data validation framework with Great Expectations to check for nulls, outliers, and schema consistency before publishing to Amazon S3.",
-        "Configured Amazon S3 Intelligent-Tiering for feature storage, reducing monthly storage spend by approximately twenty percent.",
-        "Set up Amazon CloudWatch logging and Amazon SNS alerts to improve traceability and adherence to pipeline service-level objectives."
+        "Developed SageMaker data pipelines delivering curated features (velocity, merchant patterns, anomalies) to fraud-detection models.",
+        "Implemented PySpark feature engineering and time-window aggregations within SageMaker Processing jobs.",
+        "Created Great Expectations validation suite integrated with CloudWatch alerts for schema consistency.",
+        "Configured S3 Intelligent-Tiering, reducing storage costs by 20%."
       ]
     },
     {
@@ -160,11 +136,10 @@ export const siteConfig = {
       "title": "Data Engineer",
       "dateRange": "Jul 2018 – Apr 2021",
       "bullets": [
-        "Engineered regulatory reporting pipelines processing more than one terabyte of financial and compliance data per month using PySpark and Hive.",
-        "Built Python REST microservices with FastAPI and SQLAlchemy to migrate operational data from OLTP systems to Hadoop with GDPR safeguards.",
-        "Enforced data-governance controls with tokenization and column-level encryption and secured services with OAuth 2.0 and JWT.",
-        "Improved PySpark SQL performance via broadcast joins, column pruning, and predicate pushdown and automated deployments for more than twenty jobs with shell scripts.",
-        "Delivered Tableau dashboards for compliance metrics and business KPIs."
+        "Developed PySpark/Hive ETL workflows processing 1 TB+ monthly for regulatory CECL/CCAR reporting.",
+        "Built FastAPI microservices migrating 5M+ OLTP records daily to Hadoop with full GDPR compliance.",
+        "Implemented OAuth 2.0 + JWT-secured APIs and enforced column-level encryption.",
+        "Optimized PySpark SQL via broadcast joins and predicate pushdown, reducing nightly ETL durations."
       ]
     }
   ],
@@ -177,7 +152,7 @@ export const siteConfig = {
       "achievements": [
         "Specialization in Machine Learning and AI",
         "Research Assistant for AI/ML projects",
-        "Relevant coursework: Natural Language Processing, Big Data Systems, Large Language Models, Cloud Computing"
+        "Relevant coursework: NLP, Big Data Systems, Large Language Models, Cloud Computing"
       ]
     },
     {
@@ -185,11 +160,9 @@ export const siteConfig = {
       "degree": "AWS Certified Data Engineer – Associate",
       "dateRange": "2023",
       "achievements": [
-        "Validated expertise in AWS data services and pipeline design",
-        "Hands-on experience with performance tuning and cost optimization",
-        "Focus on data security, governance, and compliance best practices"
+        "Validated expertise in AWS data architecture, orchestration, and optimization",
+        "Hands-on experience with performance tuning, governance, and compliance"
       ]
     }
   ]
-}
-;
+};
