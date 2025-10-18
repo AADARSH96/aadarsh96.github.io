@@ -158,7 +158,7 @@ export const siteConfig = {
     {
       "school": "Amazon Web Services",
       "degree": "AWS Certified Data Engineer – Associate",
-      "dateRange": "2023",
+      "dateRange": "2025",
       "achievements": [
         "Validated expertise in AWS data architecture, orchestration, and optimization",
         "Hands-on experience with performance tuning, governance, and compliance"
